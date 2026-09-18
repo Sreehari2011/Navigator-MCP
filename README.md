@@ -1,8 +1,7 @@
 # Navigator MCP — the pathfinding browser MCP
 
 **High-performance browser automation for LLM agents.**
-One Model Context Protocol server — the *Navigator* autonomous browser
-agent, reborn as a first-class MCP server:
+One Model Context Protocol server — the *Navigator*
 
 - 🧠 **Token-efficient perception** — ref-based accessibility snapshots with
   change-caching (an unchanged page costs ~40 tokens, not 4,000)
