@@ -247,8 +247,6 @@ navigator_mcp/
 └── network/
     └── interceptor.py   capture filters · API discovery
 
-reference/               parked security suite (OOB/passive/WAF/raw HTTP/XSS)
-                         → future companion Security MCP. Not installed.
 ```
 
 ## Development
@@ -272,5 +270,3 @@ gate and the MCP initialize handshake).
 - Remote browser grid (connect a fleet via CDP endpoints)
 - Playwright-element-handle-compatible script recording
 - Headful farm orchestration on top of the VNC profile
-- **Security MCP** — revive `reference/` as a dedicated companion server
-  (passive scanning, WAF detection, raw HTTP, encrypted OOB callbacks)
