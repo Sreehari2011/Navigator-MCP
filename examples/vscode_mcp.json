@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "navigator": {
+      "type": "stdio",
+      "command": "navigator-mcp",
+      "env": {
+        "NAVIGATOR_STEALTH": "true",
+        "NAVIGATOR_HEADLESS": "true"
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+"""Navigator MCP — stealth package."""

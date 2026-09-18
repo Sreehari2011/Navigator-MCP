@@ -1,0 +1,39 @@
+# Navigator MCP — one-command deployment
+#
+#   docker compose up          # HTTP server on :8765 with API key
+#   docker compose --profile vnc up   # + headful mode with VNC on :5901
+
+services:
+  navigator:
+    build: .
+    image: navigator-mcp:latest
+    init: true
+    ports:
+      - "8765:8765"
+    environment:
+      NAVIGATOR_API_KEYS: "sk-change-me"
+      NAVIGATOR_STEALTH: "true"
+      # TWOCAPTCHA_API_KEY: "..."
+      # CAPSOLVER_API_KEY: "..."
+    volumes:
+      - navigator-data:/data
+    command: ["--transport", "http", "--host", "0.0.0.0", "--port", "8765"]
+    restart: unless-stopped
+
+  navigator-headful:
+    profiles: ["vnc"]
+    build: .
+    image: navigator-mcp:latest
+    init: true
+    ports:
+      - "8766:8766"
+      - "5901:5901"
+    environment:
+      NAVIGATOR_API_KEYS: "sk-change-me-too"
+    volumes:
+      - navigator-data:/data
+    command: ["--headful", "--transport", "http", "--host", "0.0.0.0", "--port", "8766"]
+    restart: unless-stopped
+
+volumes:
+  navigator-data:

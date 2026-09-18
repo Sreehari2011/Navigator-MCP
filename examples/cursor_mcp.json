@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "navigator": {
+      "command": "navigator-mcp",
+      "args": [],
+      "env": {
+        "NAVIGATOR_STEALTH": "true",
+        "NAVIGATOR_HEADLESS": "true"
+      }
+    }
+  }
+}

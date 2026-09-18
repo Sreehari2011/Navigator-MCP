@@ -1,0 +1,1 @@
+"""Navigator MCP — captcha package."""
